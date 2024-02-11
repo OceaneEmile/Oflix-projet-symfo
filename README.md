@@ -1,11 +1,9 @@
-# Projet O'flix, Symfony Getting Started
+# Projet O'flix Symfony 
 
-Afin de prendre en main le framework Symfony, nous allons mettre en place un site qui répertorie des films et des séries ! Appelons-le O'flix.
+Voici mon premier projet Symfony : Oflix qui repertorie les films et les séries.
 
-Voici quelques captures et contenus fournis, pour entrevoir les fonctionnalités attendues. Les étapes de l'exercice sont détaillées ensuite.
 
-## Intégration HMTL/CSS fournie
-
+##  HMTL/CSS fournie
 ### 1. Page d'accueil
 
 ![browse](./sources/readme/01-index.png)
@@ -24,33 +22,15 @@ Voici quelques captures et contenus fournis, pour entrevoir les fonctionnalités
 
 ---
 
-### Objectifs
-
-- Installer _Symfony Skeleton_
-- L'enrichir au besoin via la documentation de Symfony section _Getting Started_, à l'aide de ce README.
-- Parcourir la documentation Twig (moteur de templating)
-- Créer un site entre Allociné et Netflix.
-
-Vous travaillerez à partir de [la documentation Symfony : Getting Started](https://symfony.com/doc/current/index.html).
-
-> :hand: **Toutes les infos sont contenues dans les chapitres du _Getting Started_**. _Pas besoin d'aller chercher les infos ailleurs_ pour le moment (je sais c'est tentant mais la doc Symfo sera notre bible prioritaire :pray:).
-
-## Etapes de l'exercice
-
 ### Installation
 
 Installer un nouveau projet Symfony _"skeleton"_, via _composer_, depuis votre dossier cloné :
 
 - `composer create-project symfony/skeleton oflix`
 
-Vous pouvez :
-
-- Conserver ce sous-dossier, entrez dans le dossier du projet avec `cd oflix`.
-- Ou **plus propre** et nécessite une ligne de commande, [remonter tous les fichiers de Symfony à la racine de votre dépôt cloné](https://kourou.oclock.io/ressources/fiche-recap/symfony-basics/#anchor-remonter-tous-les-fichiers-dun-niveau).
-
 > :hand: On peut utiliser le serveur PHP pour lancer l'appli Symfony : `php -S 0.0.0.0:8000 -t public`.
 > 
-> :hand: Ou passer par Apache, on installe le `.htaccess` via `composer require symfony/apache-pack` (répondre `y` à l'invite).
+> :hand: Ou passer par Apache, on installe le `.htaccess` via `composer require symfony/apache-pack` 
 
 ### Les routes
 
