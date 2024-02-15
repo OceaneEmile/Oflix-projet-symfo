@@ -28,13 +28,35 @@ Installer un nouveau projet Symfony _"skeleton"_, via _composer_, depuis votre d
 
 - `composer create-project symfony/skeleton oflix`
 
+- Remonter le dossier créé 
+`mv sous-dossier/* sous-dossier/.* .`
+Puis supprimer le dossier
+`rmdir sous-dossier`
+
 > :hand: On peut utiliser le serveur PHP pour lancer l'appli Symfony : `php -S 0.0.0.0:8000 -t public`.
 > 
 > :hand: Ou passer par Apache, on installe le `.htaccess` via `composer require symfony/apache-pack` 
+# Installation Twg:
+composer require twig/twig
+
+# Installation des assets
+composer require symfony/asset
+
+# Création des sessions :
+composer require symfony/http-foundation
+
+# Installation d'un profiler
+composer require --dev symfony/profiler-pack
+
+# Installation de Doctrine ( pas besoin de Docker)
+composer require symfony/orm-pack
+composer require --dev symfony/maker-bundle
 
 ### Les routes
 
 > :hand: Lister les pages attendues afin d'en déduire les routes (URL, contrôleur, méthode, paramètres, description). Les noter dans le fichier `routes.md` fourni dans le dossier _sources_.
+>
+>Modification du fichier .env
 
 > On commence par **la page d'accueil** et **la page du film/série**
 
