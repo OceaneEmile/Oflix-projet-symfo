@@ -19,15 +19,9 @@ class Review
     private ?string $username = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\Email(
-        message: 'The email {{ value }} is not a valid email.',
-    )]
     private ?string $email = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    #[Assert\Length(
-        min: 10
-    )]
     private ?string $content = null;
 
     #[ORM\Column]

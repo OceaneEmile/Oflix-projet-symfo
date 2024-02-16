@@ -17,7 +17,7 @@ class Movie
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['get_movie'])]
+   
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
@@ -25,35 +25,29 @@ class Movie
         max: 100,
         maxMessage: 'Le titre doit faire moins de {{ limit }} characters',
     )]
-    #[Groups(['get_movie'])]
+  
     private ?string $title = null;
 
     #[ORM\Column]
-    #[Groups(['get_movie'])]
+  
     private ?int $duration = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    #[Groups(['get_movie'])]
     private ?\DateTimeInterface $releaseDate = null;
 
     #[ORM\Column(length: 10)]
-    #[Groups(['get_movie'])]
     private ?string $type = null;
 
     #[ORM\Column(length: 200)]
-    #[Groups(['get_movie'])]
     private ?string $summary = null;
 
     #[ORM\Column(length: 5000)]
-    #[Groups(['get_movie'])]
     private ?string $synopsis = null;
 
     #[ORM\Column(length: 2083)]
-    #[Groups(['get_movie'])]
     private ?string $poster = null;
 
     #[ORM\Column(type: Types::DECIMAL, precision: 2, scale: 1)]
-    #[Groups(['get_movie'])]
     private ?string $rating = null;
 
     // Ci dessous la relation depuis Movie vers Season
@@ -66,7 +60,6 @@ class Movie
     private Collection $genres;
 
     #[ORM\OneToMany(mappedBy: 'movie', targetEntity: Casting::class, orphanRemoval: true)]
-    #[OrderBy(["creditOrder" => "ASC"])]
     private Collection $castings;
 
     #[ORM\OneToMany(mappedBy: 'movie', targetEntity: Review::class, orphanRemoval: true)]
