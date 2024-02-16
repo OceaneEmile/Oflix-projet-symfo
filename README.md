@@ -54,19 +54,14 @@ composer require --dev symfony/maker-bundle
 
 ### Les routes
 
-> :hand: Lister les pages attendues afin d'en déduire les routes (URL, contrôleur, méthode, paramètres, description). Les noter dans le fichier `routes.md` fourni dans le dossier _sources_.
->
+
 >Modification du fichier .env
 
-> On commence par **la page d'accueil** et **la page du film/série**
 
 ### Les assets
 
 Dans le dossier `public` copier les 2 sous-dossiers `css` et `images` du dossier `sources/html-css`.
 
-> On s'occupera du fichier `data.php` dans quelques minutes.
-
-> :hand: A ce stade la structure de notre site est en place, il ne nous reste plus qu'à attaquer le code !
 
 ---
 
