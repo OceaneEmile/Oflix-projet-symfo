@@ -65,8 +65,7 @@ class Movie
     #[ORM\OneToMany(mappedBy: 'movie', targetEntity: Review::class, orphanRemoval: true)]
     private Collection $reviews;
 
-    #[ORM\Column(length: 255)]
-    private ?string $slug = null;
+
 
 
     public function __construct()

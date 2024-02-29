@@ -129,3 +129,9 @@ On le notera par un **changement de couleur de la nav** : Netflix en noir / Allo
 > Ce bonus sert principalement à s'exercer avec les concepts de Symfony, la gestion d'un thème se faisant plutôt côté client (cookie, LocalStorage) ou le cas échéant dans le profil de l'utilisateur côté back, à voir quand on découvrira l'usage des bases de données.
 
 [Plus d'info par ici](README-Theme-switcher.md)
+
+## Installation de DoctrineFixturesBundle
+`composer req --dev make doctrine/doctrine-fixtures-bundle`
+
+## Installation de Faker
+`composer require --dev fzaninotto/faker`
