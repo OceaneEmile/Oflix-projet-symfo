@@ -12,8 +12,10 @@ class MainController extends AbstractController
     #[Route('/', name: 'home-page')]
     public function home(MovieRepository $movieRepository): Response
     {
-        $movies = $movieRepository->findAll();
+        $movie = $movieRepository->findAll();
         return $this->render('main/main.html.twig', [
+            'movie' => $movie
         ]);
     }
+
 }
