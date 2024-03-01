@@ -50,9 +50,9 @@
                         <dl class="row">
                             <dt class="col-sm-12">Avec</dt>
                             <dd class="col-sm-12">
-                                Acteur 1 (Tilt)<br>
-                                Acteur 2 (La reine)<br>
-                                Acteur 3 (Franz)<br>
+                                 {% for casting in movie.castings %}
+                                {{ casting.person.firstname }} {{ casting.person.lastname }} ({{ casting.role }})<br>
+                            {% endfor %}
                             </dd>
                             <dt class="col-sm-12">Pays</dt>
                             <dd class="col-sm-12">USA</dd>
