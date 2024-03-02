@@ -31,6 +31,7 @@ class ReviewController extends AbstractController
         $form = $this->createForm(ReviewType::class, $review);
         return $this->render('review/add.html.twig', [
             'form' => $form,
+            'movie' => $movie
         ]);
     }
 }
