@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ReviewType extends AbstractType
@@ -52,6 +53,9 @@ class ReviewType extends AbstractType
             ])
             ->add('watchedAt',DateType::class, [
                 'label' => 'Vous avez vu ce film le ...'
+            ])
+            ->add('submit', SubmitType::class, [
+                'attr' => ['class' => 'save'],
             ])
             
         ;
