@@ -63,6 +63,20 @@
                             <div>
                                 <h2>Critiques</h2>
                                 <a class="btn btn-sm btn-warning" href="{{ path('app_review_add', {id: movie.id})}}">Ajouter une critique</a>
+                                {% for review in movie.reviews %}
+                                <div class="mt-3">
+                                <strong>Postée le {{ review.watchedAt|date('d-m-Y') }}</strong> par {{ review.username }}<br>
+                                <strong>Commentaire</strong> : {{ review.content }}<br>
+                                <strong>Le film m'a fait</strong> : {{ review.reactions|join(',')}}<br>
+                                <strong>Note :<strong>
+                                <div style="color: orange">
+                                    <span class="ps-1">{{ review.rating }}/5</span>
+                                </div>
+                                </div>
+                                {# Si aucune reviews #}
+                                {% else %}
+                                    <p>Aucune critique disponible pour ce film.</p>
+                                {% endfor %}
                             </div>
                     </div>
                 </div>
