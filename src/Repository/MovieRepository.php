@@ -21,7 +21,28 @@ class MovieRepository extends ServiceEntityRepository
         parent::__construct($registry, Movie::class);
     }
 
+    /**
+     * Retrive all movies ordered by title ascending
+     *
+     * @return void
+     */
+    public function findAllOrderByTitleAscDql()
+    {
+    //Manager
+        $manager = $this->getEntityManager();
+    // DQL request select all movies ordered by title ascending 
+        $query = $manager->createQuery(
+            'SELECT m
+            FROM App\Entity\Movie m
+            ORDER BY m.title ASC'
+        );
 
+    // return result
+        return $query->getResult();
+    }
+//    /**
+//     * @return Movie[] Returns an array of Movie objects
+//     */
 
 //    /**
 //     * @return Movie[] Returns an array of Movie objects

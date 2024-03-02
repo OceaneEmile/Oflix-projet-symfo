@@ -13,7 +13,7 @@ class MainController extends AbstractController
     #[Route('/', name: 'home-page')]
     public function home(MovieRepository $movieRepository,GenreRepository $genreRepository): Response
     {
-        $movie = $movieRepository->findAll();
+        $movie = $movieRepository->findAllOrderByTitleAscDql();
         $genres = $genreRepository->findAll();
         return $this->render('main/main.html.twig', [
             'movie' => $movie,
