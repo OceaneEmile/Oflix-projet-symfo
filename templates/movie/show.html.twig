@@ -50,7 +50,8 @@
                         <dl class="row">
                             <dt class="col-sm-12">Avec</dt>
                             <dd class="col-sm-12">
-                                 {% for casting in movie.castings %}
+                    {# a <=> b :  filtre sort avec tri qui se fait dans l'ordre croissant des valeurs de creditOrder.#}
+                                  {% for casting in movie.castings|sort((a, b) => a.creditOrder <=> b.creditOrder) %}
                                 {{ casting.person.firstname }} {{ casting.person.lastname }} ({{ casting.role }})<br>
                             {% endfor %}
                             </dd>
