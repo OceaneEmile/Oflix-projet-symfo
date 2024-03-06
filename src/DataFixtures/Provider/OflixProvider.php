@@ -466,7 +466,7 @@ class OflixProvider
     public function genre_rand()
     {
         // Genere un nombre au hasard entre 0 et et 79 (car 80 genres)
-        $rand = rand(0, 76);
+        $rand = rand(0, 79);
         // Retourne le film qui a pour index la valeur random
         return $this->genres[$rand];
     }
